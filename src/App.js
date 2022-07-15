@@ -1,9 +1,11 @@
 import './App.css';
+import Hero from './pages/Hero';
 
 const App = () => {
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <Hero />
+      {/* <h1>hello world</h1> */}
     </div>
   );
 }
