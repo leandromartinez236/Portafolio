@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, Box, Flex, Heading } from "@chakra-ui/react";
 import imageHero from "../assets/images/hero.jpg";
+import '../components/_styles.css'
+
 const Hero = () => {
   return (
     <Box
@@ -32,7 +34,16 @@ const Hero = () => {
             quia fugit odio error reprehenderit!
           </Text>
         </Flex>
-        <Box position='absolute' top='90%' fontSize='1.4rem'>⬇</Box>
+        <Box position='absolute' top='90%'>
+          <Flex margin='0px auto'
+            w='15px'
+            h='35px'
+            border='3px solid white'
+            borderRadius='20px'
+            display='flex'>
+            <Box className="mouse-scroll"></Box>
+          </Flex>
+        </Box>
       </Flex>
     </Box>
   );
