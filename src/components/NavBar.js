@@ -28,7 +28,7 @@ const NavBar = () => {
     <Box style={stylesNavBar.header} backdropFilter='blur(2px)'>
       <Box style={stylesNavBar.navBar}>
         <Flex gap='2rem' justifyContent='space-between' >
-          <Text color='#fff' m='0'>Leandro()</Text>
+          <Text color={`${darkMode ? '#000' : '#fff'}`} m='0'>Leandro()</Text>
           <label className="switch">
             <input id="bdark" type="checkbox" onClick={setDarkMode} />
             <span className="slider"></span>
