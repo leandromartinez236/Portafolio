@@ -1,12 +1,15 @@
 import React from 'react'
 import { Box, Text, Flex } from '@chakra-ui/react'
 import './navbar.css'
-import { useSelector } from 'react-redux'
-import { selectMode } from '../features/theme'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { selectMode, setDarkTheme } from '../features/theme'
 const NavBar = () => {
   const darkMode = useSelector(selectMode)
+  const dispatch = useDispatch()
 
+  const setDarkMode = () => {
+    dispatch(setDarkTheme())
+  }
   const stylesNavBar = {
     header: {
       position: 'fixed',
@@ -27,7 +30,7 @@ const NavBar = () => {
         <Flex gap='2rem' justifyContent='space-between' >
           <Text color='#fff' m='0'>Leandro()</Text>
           <label className="switch">
-            <input id="bdark" type="checkbox" onClick={() => { }} />
+            <input id="bdark" type="checkbox" onClick={setDarkMode} />
             <span className="slider"></span>
           </label>
         </Flex>
