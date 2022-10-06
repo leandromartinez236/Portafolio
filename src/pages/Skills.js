@@ -10,7 +10,7 @@ const Skills = () => {
       bgColor={darkMode ? 'rgb(36, 27, 34)' : '#fff'}
       padding='10px 0px'
     >
-      <Heading textAlign='center' margin='0'>Skills</Heading>
+      <Heading textAlign='center' margin='0' color={darkMode ? '#f3ff00' : '#000'}>Skills</Heading>
     </Box>
   )
 }
