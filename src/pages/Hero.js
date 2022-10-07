@@ -25,7 +25,7 @@ const Hero = () => {
       >
         <Flex
           alignSelf='flex-start'
-          w='60%'
+          width={['100%', '60%', '75%', '60%']}
           flexDir='column'
         >
           <Heading fontSize='2.4rem' mb='0.7rem'>Hola soy Leandro!</Heading>
@@ -34,7 +34,7 @@ const Hero = () => {
             quia fugit odio error reprehenderit!
           </Text>
         </Flex>
-        <Box position='absolute' top='90%'>
+        <Box position='sticky' top='91%' p='20px 0px'>
           <Flex margin='0px auto'
             w='15px'
             h='35px'
