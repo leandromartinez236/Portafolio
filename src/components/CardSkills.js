@@ -10,7 +10,7 @@ const CardSkills = ({ image, name, bgColor, color }) => {
       bgColor={!darkMode ? bgColor : 'rgb(36, 27, 34)'}
       alignItems='center'
       justifyContent='space-evenly'
-      paddingInline='10px'
+      padding='7px 10px'
       borderRadius='2px'
       gap='8px'
     >

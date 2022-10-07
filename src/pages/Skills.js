@@ -16,12 +16,12 @@ const Skills = () => {
         <Heading fontSize={30} textAlign='center' margin='0' color={darkMode ? '#fff' : '#000'}>
           Skills
         </Heading>
-        <Box width={40} h='2px' border={1} bgColor={darkMode ? 'orange' : '#4479ed'}></Box>
+        <Box width='40px' h='2px' border={1} bgColor={darkMode ? 'orange' : '#4479ed'}></Box>
       </Flex>
       <Box maxW='60%' m='40px auto'>
         <Grid
           gridTemplateColumns="repeat(auto-fill, minmax(105px,1fr))"
-          gap={9}
+          gap='10px'
         >
           {skills.map(({ image, name, bgColor, color }) => (
             <CardSkills
