@@ -1,4 +1,4 @@
-import { Box, Grid, Heading } from '@chakra-ui/react'
+import { Box, Flex, Grid, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import CardSkills from '../components/CardSkills'
@@ -9,14 +9,19 @@ const Skills = () => {
   const darkMode = useSelector(selectMode)
   return (
     <Box
-      bgColor={darkMode ? 'rgb(36, 27, 34)' : '#fff'}
-      padding='10px 0px'
+      bgColor={darkMode ? '#1b1717' : '#fff'}
+      padding='60px 0px'
     >
-      <Heading textAlign='center' margin='0' color={darkMode ? '#f3ff00' : '#000'}>Skills</Heading>
-      <Box maxW='80%' m='0 auto'>
+      <Flex justifyContent='center' flexDir='column' align='center'>
+        <Heading fontSize={30} textAlign='center' margin='0' color={darkMode ? '#fff' : '#000'}>
+          Skills
+        </Heading>
+        <Box width={40} h='2px' border={1} bgColor={darkMode ? 'orange' : '#4479ed'}></Box>
+      </Flex>
+      <Box maxW='60%' m='40px auto'>
         <Grid
           gridTemplateColumns="repeat(auto-fill, minmax(105px,1fr))"
-          gap={7}
+          gap={9}
         >
           {skills.map(({ image, name, bgColor, color }) => (
             <CardSkills
