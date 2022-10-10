@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './pages/Hero';
+import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <NavBar />
       <Hero />
       <Skills />
+      <Projects />
     </div>
   );
 }
