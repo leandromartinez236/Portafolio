@@ -2,23 +2,22 @@ import { Box, Flex, Grid, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import CardProjects from "../components/CardProjects";
+import { dataProjects } from "../data/projects";
 import { selectMode } from "../features/theme";
 
 const Projects = () => {
   const darkMode = useSelector(selectMode)
-  const pr =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Sed, nostrum doloremque impedit libero animi neque iste delectus cum! In nobis voluptatem rerum quod fugiat voluptate ex quas ea fugit saepe nemo, dicta eveniet sunt sint eius id optio vel asperiores reiciendis aperiam alias autem tempora dolores impedit.Provident, ex nulla ?";
-  const p2 =
-    "Lorem iluptate ex quas ea fugit saepe nemo, dicta eveniet sunt ?";
   return (
     <Box
       bgColor={darkMode ? '#1b1717' : '#fff'}
-      borderTop={1}>
-      <Flex justifyContent='center' flexDir='column' align='center'>
-        <Heading fontSize={30} textAlign="center" color="#000">
+      padding='80px 0px'
+      borderTop={1}
+    >
+      <Flex justifyContent='center' flexDir='column' align='center' m='30px 0px' gap='6px'>
+        <Heading fontSize={30} textAlign="center" color={darkMode ? '#fff' : '#000'}>
           Projects
         </Heading>
-        <Box width='40px' h='2px' border={1} bgColor={darkMode ? 'orange' : '#4479ed'}></Box>
+        <Box width='40px' zIndex={1} h='2px' border={1} bgColor={darkMode ? 'orange' : '#4479ed'}></Box>
       </Flex>
       <Grid
         maxW='90%'
@@ -26,9 +25,14 @@ const Projects = () => {
         gridTemplateColumns="repeat(auto-fit, minmax(230px,1fr))"
         gap={["2rem", "2rem", "2rem", "4rem"]}
       >
-        <CardProjects text={pr} />
-        <CardProjects text={p2} />
-        <CardProjects text={pr} />
+        {dataProjects.map((project) => (
+          <CardProjects
+            key={project.id}
+            text={project.text}
+            image={project.image}
+            title={project.title}
+          />
+        ))}
       </Grid>
     </Box>
   );
