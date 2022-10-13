@@ -1,16 +1,17 @@
 import React from "react";
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { selectMode } from "../features/theme";
 
-const CardProjects = ({ text, image, title }) => {
+const CardProjects = ({ data }) => {
   const darkMode = useSelector(selectMode)
   return (
     <Box
       m='0 auto'
-      maxW={["220px", "300px", "330px", "360px"]}
+      maxW={["260px", "300px", "330px", "360px"]}
       transition="all 500ms ease"
       borderTopRadius='15px'
+      h='fit-content'
       _hover={{
         transform: "scale(1.04)",
         transition: "all 500ms ease",
@@ -21,18 +22,19 @@ const CardProjects = ({ text, image, title }) => {
       <Box>
         <Image
           borderTopRadius='10px'
-          objectFit='contain' bgRepeat='no-repeat' bgPos='top left' height={"100%"} m="0 auto" src={image}
+          objectFit='contain' bgRepeat='no-repeat' bgPos='top left' height={"100%"} m="0 auto" src={data?.image}
         />
       </Box>
-      <Flex borderBottomRadius='15px' p="1.2rem" bgColor={darkMode ? "#ff4500cc" : "#009688d4"} flexDirection={"column"}>
+      <Flex borderBottomRadius='15px' p="1.2rem" bgColor={darkMode ? "#241b22" : "#009688d4"} flexDirection={"column"}>
         <Heading
           fontSize={18}
           fontWeight={700}
-          color='#fff'
+          color={darkMode ? 'orange' : '#fff'}
+          textAlign='center'
           mb="12px"
           overflow="hidden"
         >
-          {title}
+          {data?.title}
         </Heading>
         <Text
           fontSize={16}
@@ -41,11 +43,13 @@ const CardProjects = ({ text, image, title }) => {
           h="100px"
           overflow="hidden"
         >
-          {text}
+          {data?.text}
         </Text>
         <Flex mt='16px' justifyContent='space-between'>
-          <Text color='#fff' fontSize={13} fontWeight={500}>Ver Código</Text>
-          <Text color='#fff' fontSize={13} fontWeight={500}>Ir al sitio</Text>
+          <Link href={data?.github} isExternal><Text color='#fff' fontSize={13} fontWeight={500}>Ver Código</Text></Link>
+          {data?.web && (
+            <Link href={data.web} isExternal><Text color='#fff' fontSize={13} fontWeight={500}>Ir al sitio</Text></Link>
+          )}
         </Flex>
       </Flex>
     </Box>

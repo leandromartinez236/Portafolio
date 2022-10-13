@@ -22,15 +22,13 @@ const Projects = () => {
       <Grid
         maxW='90%'
         m='0 auto'
-        gridTemplateColumns="repeat(auto-fit, minmax(230px,1fr))"
+        gridTemplateColumns="repeat(auto-fit, minmax(250px,1fr))"
         gap={["2rem", "2rem", "2rem", "4rem"]}
       >
         {dataProjects.map((project) => (
           <CardProjects
             key={project.id}
-            text={project.text}
-            image={project.image}
-            title={project.title}
+            data={project}
           />
         ))}
       </Grid>
