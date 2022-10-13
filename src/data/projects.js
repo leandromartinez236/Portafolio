@@ -16,4 +16,10 @@ export const dataProjects = [
   {
     id: '4', github: 'https://github.com/leandromartinez236/rick-and-morty-select', web: 'https://rick-and-morty-umber-eight.vercel.app/', image: morty, title: 'Rick and Morty API', text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Sed, nostrum doloremque impedit libero animi neque iste delectus cum! In nobis voluptatem rerum quod fugiat voluptate ex quas ea fugit saepe nemo, dicta eveniet sunt sint eius id optio vel asperiores reiciendis aperiam alias autem tempora dolores impedit.Provident, ex nulla ?"
   },
+  {
+    id: '5', github: 'https://github.com/leandromartinez236/restapi-sequelize', web: false, image: false, title: 'Sequelize API', text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Sed, nostrum doloremque impedit libero animi neque iste delectus cum! In nobis voluptatem rerum quod fugiat voluptate ex quas ea fugit saepe nemo, dicta eveniet sunt sint eius id optio vel asperiores reiciendis aperiam alias autem tempora dolores impedit.Provident, ex nulla ?"
+  },
+  {
+    id: '6', github: 'https://github.com/leandromartinez236/API-REST-with-TypeScript-Express-y-NodeJS', web: false, image: false, title: 'API con Typescript', text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Sed, nostrum doloremque impedit libero animi neque iste delectus cum! In nobis voluptatem rerum quod fugiat voluptate ex quas ea fugit saepe nemo, dicta eveniet sunt sint eius id optio vel asperiores reiciendis aperiam alias autem tempora dolores impedit.Provident, ex nulla ?"
+  },
 ]

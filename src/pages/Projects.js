@@ -9,7 +9,7 @@ const Projects = () => {
   const darkMode = useSelector(selectMode)
   return (
     <Box
-      bgColor={darkMode ? '#1b1717' : '#fff'}
+      bgColor={darkMode ? '#1b1717' : '#e2e2e2'}
       padding='80px 0px'
       borderTop={1}
     >
