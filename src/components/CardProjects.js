@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { selectMode } from "../features/theme";
+import ApiImage from "./ApiImage";
 
 const CardProjects = ({ data }) => {
   const darkMode = useSelector(selectMode)
@@ -20,10 +21,12 @@ const CardProjects = ({ data }) => {
       borderBottomRadius='15px'
     >
       <Box>
-        <Image
+        {data?.image ? <Image
           borderTopRadius='10px'
           objectFit='contain' bgRepeat='no-repeat' bgPos='top left' height={"100%"} m="0 auto" src={data?.image}
         />
+          : <ApiImage />
+        }
       </Box>
       <Flex borderBottomRadius='15px' p="1.2rem" bgColor={darkMode ? "#241b22" : "#009688d4"} flexDirection={"column"}>
         <Heading
