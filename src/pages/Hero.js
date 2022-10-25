@@ -21,7 +21,7 @@ const Hero = () => {
         m='0 auto'
         justifyContent='center'
         align='center'
-        flexDir='column'
+        flexDir='column-reverse'
       >
         <Flex
           alignSelf='flex-start'
@@ -30,8 +30,7 @@ const Hero = () => {
         >
           <Heading fontSize='2.4rem' mb='0.7rem'>Hola soy Leandro!</Heading>
           <Text fontSize='1.2rem'>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam
-            quia fugit odio error reprehenderit!
+            Programador FullStack🔋. Entusiasta en el desarrollo web y dispuesto a adquirir nuevos conocimientos🎯
           </Text>
         </Flex>
         <Box position='sticky' top='91%' p='20px 0px'>
