@@ -3,6 +3,7 @@ import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { selectMode } from "../features/theme";
 import ApiImage from "./ApiImage";
+import Label from "./Label";
 
 const CardProjects = ({ data }) => {
   const darkMode = useSelector(selectMode)
@@ -53,6 +54,11 @@ const CardProjects = ({ data }) => {
           {data?.web && (
             <Link href={data.web} isExternal><Text color='#fff' fontSize={13} fontWeight={500}>Ir al sitio</Text></Link>
           )}
+        </Flex>
+        <Flex flexWrap='wrap' gap='10px'>
+          {data?.technologies?.map((technology, index) => (
+            <Label key={index} text={technology} />
+          ))}
         </Flex>
       </Flex>
     </Box>
