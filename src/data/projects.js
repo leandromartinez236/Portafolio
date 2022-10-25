@@ -11,6 +11,7 @@ export const dataProjects = [
     image: myfinances,
     title: "My finances",
     text: "Aplicación diseñada para organizar tus gastos e ingresos, registrar con fecha tus movimientos de dinero y poder revisar los totales, mediante un gráfico de pastel.",
+    technologies: ['chakra-ui', 'react', 'axios', 'chart-js', 'react-router-dom']
   },
   {
     id: "2",
@@ -19,6 +20,7 @@ export const dataProjects = [
     image: wheaterApp,
     title: "WheaterApp",
     text: "Ofrece información climática sobre la ciudad que elijas, con su respectiva temperatura (min°, max°), humedad, viento.",
+    technologies: ['chakra-ui', 'react']
   },
   {
     id: "3",
@@ -27,6 +29,7 @@ export const dataProjects = [
     image: tiendaMueble,
     title: "Tienda Mueble",
     text: "Página web para la venta de muebles, cuenta con un hero, seccion categorias y variedad de productos con responsive design.",
+    technologies: ['html', 'css', 'javascript']
   },
   {
     id: "4",
@@ -35,6 +38,7 @@ export const dataProjects = [
     image: morty,
     title: "Rick and Morty API",
     text: "Elige a tu personaje favorito de Rick and morty y consigue toda su información en formato de tarjetas llamativas.",
+    technologies: ['react', 'css']
   },
   {
     id: "5",
@@ -43,6 +47,7 @@ export const dataProjects = [
     image: false,
     title: "API con Sequelize",
     text: "API completa con su respectivo C.R.U.D para las tareas y proyectos, creacion de modelos, controladores y rutas.",
+    technologies: ['express', 'sequelize', 'pg-hstore']
   },
   {
     id: "6",
@@ -52,5 +57,6 @@ export const dataProjects = [
     image: false,
     title: "API con Typescript",
     text: "Podrás ver y crear reviews de peliculas, colocando calificación y una breve reseña",
+    technologies: ['express', 'typescript']
   },
 ];
