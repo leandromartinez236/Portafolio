@@ -55,7 +55,7 @@ const CardProjects = ({ data }) => {
             <Link href={data.web} isExternal><Text color='#fff' fontSize={13} fontWeight={500}>Ir al sitio</Text></Link>
           )}
         </Flex>
-        <Flex flexWrap='wrap' gap='10px'>
+        <Flex mt='15px' flexWrap='wrap' gap='10px'>
           {data?.technologies?.map((technology, index) => (
             <Label key={index} text={technology} />
           ))}
